@@ -13,17 +13,13 @@ const style = {
 function Board(props) {
     const {squares, onClick} = props;
     return (
-        <div style={style}>
-            <Square value="1" onClick={ () => onClick("some value")}/>
-            <Square value="2" onClick={ () => onClick("some value")}/>
-            <Square value="3" onClick={ () => onClick("some value")}/>
-            <Square value="4" onClick={ () => onClick("some value")}/>
-            <Square value="5" onClick={ () => onClick("some value")}/>
-            <Square value="6" onClick={ () => onClick("some value")}/>
-            <Square value="7" onClick={ () => onClick("some value")}/>
-            <Square value="8" onClick={ () => onClick("some value")}/>
-            <Square value="9" onClick={ () => onClick("some value")}/>
-        </div>
+        <section style={style}>
+            {squares.map((square, index) => {
+                return (
+                <Square key={index} value={square} onClick={ () => onClick(index)}/> )
+            })}
+            
+        </section>
     )
 }
 
