@@ -2,9 +2,9 @@ import Square from './Square';
 
 const style = {
     border: '4px solid green',
-    borderRadius: '5px',
-    width: '250ps',
-    heigth: '250px',
+    borderRadius: '10px',
+    width: '400px',
+    height: '400px',
     display: 'grid',
     gridTemplate: 'repeat(3, 1fr) / repeat(3, 1fr)'
 };

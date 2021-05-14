@@ -1,6 +1,10 @@
+import Board from './Board'
 function Game() {
+    function handleClick() {
+        
+    }
     return (
-        <h1>Game</h1>
+        <Board onClick={handleClick} />
     )
 }
 
