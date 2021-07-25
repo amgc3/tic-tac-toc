@@ -18,20 +18,20 @@ function Game() {
     const boardCopy = cloneDeep(board);
     //   console.log(boardCopy === board)
     //   console.log(boardCopy[0] === board[0]);
+    // if user clicks on an occupied square or game is won do nothing
     if (winner || boardCopy[index]) return;
+    // put an X or O in the square
     boardCopy[index] = xMove ? 'X' : 'O';
     setBoard(boardCopy);
     setXmove(!xMove);
   }
-  
-  // 
+   
   function renderMoves() {
       return (<button onClick={() => setBoard(Array(9).fill(null))}>
           Start Game
       </button>)
   }
   return (
-    // fragment wraps two elements as we can only return one
     <>
       <Board squares={board} onClick={handleClick} />
       <div style={styles}>
